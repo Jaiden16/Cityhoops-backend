@@ -53,5 +53,5 @@ INSERT into info(player,picture,nickname,height)
     VALUES(1,'https://firebasestorage.googleapis.com/v0/b/chzv2-bcffe.appspot.com/o/images%2F18739087_10154922759203778_2786552983602310199_o.jpg?alt=media&token=b05db62a-5b3a-496a-bdb1-be2a6f038973',
     'jaiden','6.0');
 
--- INSERT into info(player, nickname, height)
---     VALUES(1,'Jaiden16',6.0)
+INSERT into info(player, nickname, height)
+    VALUES(1,'Jaiden16',6.0)
