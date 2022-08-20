@@ -3,7 +3,10 @@
 
 -- \c firebase_auth;
 
--- DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS info;
+DROP TABLE IF EXISTS skills;
+DROP TABLE IF EXISTS community_skills;
+DROP TABLE IF EXISTS users;
 
 CREATE TABLE users(
     usernum SERIAL PRIMARY KEY,
@@ -40,18 +43,21 @@ CREATE TABLE community_skills(
     leadership INT,
     times_evaluated INT
 );
--- Drop TABLE if EXISTS info;
+
 CREATE TABLE info(
     player INT REFERENCES users(usernum),
+    picture VARCHAR,
     nickname VARCHAR,
     height Float
-    
-
 );
+
+
+INSERT into users(usernum,id,email,username,profile_url)
+    VALUES(1,'l7WHlHd5Z9TAkW5bNAk8XL7C5Cu1','jfagan16@gmail.com','Jaiden16','https://firebasestorage.googleapis.com/v0/b/chzv2-bcffe.appspot.com/o/images%2F195497001_1158165861330770_6300495738280464299_n.jpeg?alt=media&token=29c00b9f-c3d4-4e46-ae59-48dc09d0d36c');
 
 INSERT into info(player,picture,nickname,height)
     VALUES(1,'https://firebasestorage.googleapis.com/v0/b/chzv2-bcffe.appspot.com/o/images%2F18739087_10154922759203778_2786552983602310199_o.jpg?alt=media&token=b05db62a-5b3a-496a-bdb1-be2a6f038973',
     'jaiden','6.0');
 
-INSERT into info(player, nickname, height)
-    VALUES(1,'Jaiden16',6.0)
+-- INSERT into info(player, nickname, height)
+--     VALUES(1,'Jaiden16',6.0)
