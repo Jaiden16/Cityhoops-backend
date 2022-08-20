@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const {createUser, getAllUsers, getSingleUser, getUserId, updateUserPhoto, getUserPhoto} = require("../queries/users")
-const {checkFirebaseToken} = require("../middleware/auth")
+// const {checkFirebaseToken} = require("../middleware/auth")
 
 
 /* GET users listing. */
